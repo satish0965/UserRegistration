@@ -9,11 +9,11 @@ namespace UserRegistration
 {
     public class User
     {
-        public static void ValidFirstName()
+        public static void ValidLastName()
         {
-            Console.WriteLine("Enter FirstName");
+            Console.WriteLine("Enter LastName");
             string data  = Console.ReadLine();
-            string namepattern = "^[A-Z]{1},[a-zA-Z]{2,}"
+            string namepattern = "^[A-Z]{1},[a-zA-Z]{2,}";
             Regex regex = new Regex(namepattern);
             if(regex.IsMatch(data))
             {
