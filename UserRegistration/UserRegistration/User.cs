@@ -9,24 +9,22 @@ namespace UserRegistration
 {
     public class User
     {
-        public static void ValidEmail()
+        public static void MobileNumber()
         {
-            Console.WriteLine("Enter Email");
+            Console.WriteLine("Enter Mobile Number");
             string data  = Console.ReadLine();
-            //satish.patil@gmail.com
-            //satish.patil@gmail.co.in
-            string namepattern = "^[a-zA-Z]+[,+-]+[0-9a-zA-Z]+[@]+[a-zA-Z]+[.]+[a-zA-Z]{2,3}([.][a-zA-Z]{2,3}){0,1}$";
+            string namepattern = "^[1-9][0-9][ ]{1}[6-9][0-9]{9}$";
             Regex regex = new Regex(namepattern);
             if(regex.IsMatch(data))
             {
                 Console.ForegroundColor = ConsoleColor.Green;
-                Console.WriteLine("Email is Valid");
+                Console.WriteLine("Mobile Number is Valid");
                 Console.ResetColor();
             }
             else
             {
                 Console.ForegroundColor = ConsoleColor.Red;
-                Console.WriteLine("Email is not Valid");
+                Console.WriteLine("Mobile Number is not Valid");
                 Console.ResetColor();
 
             }
