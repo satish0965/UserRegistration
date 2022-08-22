@@ -9,11 +9,11 @@ namespace UserRegistration
 {
     public class User
     {
-        public static void PassWorldRule2()
+        public static void PassWorldRule3()
         {
             Console.WriteLine("Enter PassWord");
             string data  = Console.ReadLine();
-            string namepattern = "([A-Z]{1}[0-9a-z]{7,})";
+            string namepattern = "^[A-Za-z]{8,}[A-Z]{1,}[0-9]{1,}$";
             Regex regex = new Regex(namepattern);
             if(regex.IsMatch(data))
             {
