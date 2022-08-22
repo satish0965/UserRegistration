@@ -9,22 +9,32 @@ namespace UserRegistration
 {
     public class User
     {
-        public static void PassWorldRule4()
+        public static void EmailSample()
         {
-            Console.WriteLine("Enter PassWord");
+            Console.WriteLine("Enter Email");
             string data  = Console.ReadLine();
-            string namepattern = "^[A-Za-z]{8,}[A-Z]{1,}[0-9]{1,}[-~!@#$%^*()_+{}:|?`;',]{1,}$";
+             //Valid Emails
+             //abc@yahoo.com
+             //abc - 100@yahoo.com
+             //abc.100@yahoo.com
+             //abc111@abc.com
+             //abc - 100@abc.net
+             //abc.100@abc.com.au
+             //abc@1.com
+             //abc@gmail.com.com
+             //abc + 100@gmail.com
+            string namepattern = "^[a-zA-Z0-9]+([._+-][a-zA-Z0-9]+)*@[a-zA-Z0-9]+.[a-zA-Z]{2,4}([.][a-zA-Z]{2,})?$";
             Regex regex = new Regex(namepattern);
             if(regex.IsMatch(data))
             {
                 Console.ForegroundColor = ConsoleColor.Green;
-                Console.WriteLine("PassWord is Valid");
+                Console.WriteLine("Email is Valid");
                 Console.ResetColor();
             }
             else
             {
                 Console.ForegroundColor = ConsoleColor.Red;
-                Console.WriteLine("PassWord is not Valid");
+                Console.WriteLine("Email is not Valid");
                 Console.ResetColor();
 
             }

@@ -3,7 +3,7 @@ class program
 {
     static void Main(string[] args)
     {
-        User.PassWorldRule4();
+        User.EmailSample();
     }
 
 }
